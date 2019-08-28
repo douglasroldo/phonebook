@@ -1,0 +1,23 @@
+<h2>Adicionar Nova Cidade</h2>
+<?php echo $this->getContent() ?>
+
+<?php echo $this->tag->form("citys/create") ?>
+
+	<p>
+		<label for="name">Nome</label>
+		<?php echo $this->tag->textField("name") ?>
+	</p>
+
+	<p>
+		<label for="uf">UF</label>
+		<?php echo $this->tag->textField("uf")?>
+	</p>
+
+	<p>
+		<?php echo $this->tag->submitButton("Criar") ?>
+	</p>
+
+</form>
+
+</br>
+<?php echo $this->tag->linkTo('citys/index/', '← Voltar') ?>

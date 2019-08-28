@@ -1,0 +1,22 @@
+<h2><?php echo $title; ?></h2>
+<?php echo $this->getContent() ?>
+
+<table class="table">
+	<tr>
+		<th>Cidade</th>
+		<th>UF</th>
+
+	</tr>
+
+	<?php foreach ($cidade as $cidade) { ?>
+		<tr>
+			<td><?php echo $cidade->cidade ?></td>
+			<td><?php echo $cidade->uf ?></td>
+			<td><?php echo $this->tag->linkTo('cidade/edit/'.$cidade->id, 'Edit') ?></td>
+			<td><?php echo $this->tag->linkTo('cidade/delete/'.$cidade->id, 'Delete') ?></td>
+		</tr>
+	<?php } ?>
+</table>
+
+</br>
+<?php echo $this->tag->linkTo('cidade/new/', 'Add New cidade') ?>

@@ -1,0 +1,28 @@
+<h2>Edit New Cidade</h2>
+<?php echo $this->getContent() ?>
+
+<?php echo $this->tag->form("cidade/update") ?>
+
+	<p>
+		<?php echo $this->tag->hiddenField("id") ?>
+	</p>
+
+	<p>
+		<label for="cidade">Cidade</label>
+		<?php echo $this->tag->textField("cidade") ?>
+	</p>
+
+	<p>
+		<label for="uf">UF</label>
+		<?php echo $this->tag->textField("uf")?>
+	</p>
+
+
+	<p>
+		<?php echo $this->tag->submitButton("Update") ?>
+	</p>
+
+</form>
+
+</br>
+<?php echo $this->tag->linkTo('cidade/index/', '← Go back') ?>

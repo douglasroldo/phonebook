@@ -1,0 +1,38 @@
+<h2>Adicionar Novo Contato</h2>
+<?php echo $this->getContent() ?>
+
+<?php echo $this->tag->form(["contacts/create", "enctype" => "multipart/form-data"]) ?>
+
+	<p>
+		<label for="img">Selecione uma imagem</label>
+		<?php echo $this->tag->fileField(["img", "directory", "id" => "img"]) ?>
+	</p>
+
+	<p>
+		<label for="name">Nome</label>
+		<?php echo $this->tag->textField("name") ?>
+	</p>
+
+	<p>
+		<label for="phone">Telefone</label>
+		<?php echo $this->tag->textField("phone")?>
+	</p>
+
+	<p>
+		<label for="email">E-Mail</label>
+		<?php echo $this->tag->textField("email")?>
+	</p>
+
+	<p>
+		<label for="age">Idade</label>
+		<?php echo $this->tag->textField("age")?>
+	</p>
+
+	<p>
+		<?php echo $this->tag->submitButton("Criar") ?>
+	</p>
+
+</form>
+
+</br>
+<?php echo $this->tag->linkTo('contacts/index/', '← Votlar') ?>

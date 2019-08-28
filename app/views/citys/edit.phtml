@@ -1,0 +1,27 @@
+<h2>Editar Nova Cidade</h2>
+<?php echo $this->getContent() ?>
+
+<?php echo $this->tag->form("citys/update") ?>
+
+	<p>
+		<?php echo $this->tag->hiddenField("id") ?>
+	</p>
+
+	<p>
+		<label for="name">Nome</label>
+		<?php echo $this->tag->textField("name") ?>
+	</p>
+
+	<p>
+		<label for="uf">UF</label>
+		<?php echo $this->tag->textField("uf")?>
+	</p>
+
+	<p>
+		<?php echo $this->tag->submitButton("Atualizar") ?>
+	</p>
+
+</form>
+
+</br>
+<?php echo $this->tag->linkTo('contacts/index/', '← Voltar') ?>
